@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .selectByClassName {
+        font-weight: bold;
+      }
+      .child{
+        font-weight: bold;
+        font-size:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="selectById">Select Element by ID</h1>
+
+    <h2 class="selectByClassName">Select Elements by Class Name 1</h2>
+    <h2 class="selectByClassName">Select Elements by Class Name 2</h2>
+    
+    <h3>Select Elements by Tag Name 1</h3>
+    <h3>Select Elements by Tag Name 2</h3>
+    <h3>Select Elements by Tag Name 3</h3>
+
+    <div class="parent">
+        <div class="child">
+            <p>Select Element by Query Selector </p>
+        </div>
+    </div>
+    
+    <span class="item">Select Elements by Query Selector All 1</span>
+    <span class="item">Select Elements by Query Selector All 2</span>
+    <span class="item">Select Elements by Query Selector All 3</span>
+    
+    <h2 id="selectedElement">I like playing cricket</h5> 
+
+    <script>
+
+      // Select Element by ID
+      let selectByIdEl = document.getElementById("selectById");
+      selectByIdEl.style.backgroundColor = "red";
+      selectByIdEl.style.fontSize = "50px";
+
+
+
+      // Select Elements by Class Name
+      let selectByClassNameEl=document.getElementsByClassName("selectByClassName");
+      selectByClassNameEl[0].style.color="aqua";
+      selectByClassNameEl[1].style.color="aqua";
+
+
+    
+      // Select Elements by Tag Name
+      let selectByTagNameEl=document.getElementsByTagName("h3");
+      selectByTagNameEl[0].style.border="2px solid black";
+      selectByTagNameEl[1].style.border="2px solid black";
+      selectByTagNameEl[2].style.border="2px solid black";
+      
+      
+      //       Select Element by Query Selector
+      let querySelectorEl=document.querySelector("p");
+      querySelectorEl.style.fontStyle = "italic";
+      
+
+
+      //       Select Elements by Query Selector All
+      let querySelectorAllEl = document.querySelectorAll(".item");
+      querySelectorAllEl[0].style.margin="30px";
+      querySelectorAllEl[1].style.margin="30px";
+      querySelectorAllEl[2].style.margin="30px";
+      
+
+      // Change Styles of Selected Elements
+      let selectedEl = document.getElementById("selectedElement");
+      selectedEl.style.backgroundColor="yellow";
+      selectedEl.style.color="red";
+      selectedEl.style.padding="20px";
+      selectedEl.style.textAlign="center"
+      
+     
+    </script>
+  </body>
+</html>
